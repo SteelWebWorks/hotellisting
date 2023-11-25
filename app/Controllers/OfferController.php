@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 
 class OfferController extends BaseController
 {
+
     public function index()
     {
 
@@ -28,11 +29,8 @@ class OfferController extends BaseController
                 $query->like('o.country', $params['search'])
                     ->orLike('o.city', $params['search']);
             })
-            ->when(isset($params['order_by_country']), function ($query) use ($params) {
-                $query->orderBy('o.country', $params['order_by_country']);
-            })
-            ->when(isset($params['order_by_city']), function ($query) use ($params) {
-                $query->orderBy('o.city', $params['order_by_city']);
+            ->when(isset($params['order_by_stars']), function ($query) use ($params) {
+                $query->orderBy('o.star', $params['order_by_stars']);
             })
             ->when(isset($params['order_by_price']), function ($query) use ($params) {
                 $query->orderBy('o.price', $params['order_by_price']);
@@ -43,6 +41,10 @@ class OfferController extends BaseController
         $data = [
             'offers' => $offers,
             'pager' => $offerModel->pager,
+            'orderBy' => [
+                'stars' => isset($params['order_by_stars']) ? (($params['order_by_stars'] == "ASC") ? "DESC" : "ASC") : "DESC",
+                'price' => isset($params['order_by_price']) ? (($params['order_by_price'] == "ASC") ? "DESC" : "ASC") : "ASC",
+            ],
         ];
 
         return view('offers/list', $data);

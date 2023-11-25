@@ -5,8 +5,8 @@
     <title>Holtel Offers Listing</title>
     <meta name="description" content="One small application to show hotels' offers">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="<?=base_url('js/app.js')?>"></script>
+    <link rel="stylesheet" href="<?=base_url('css/app.css')?>">
 </head>
 <body class="bg-slate-900">
     <div class="max-w-6xl mx-auto my-2 py-2">
@@ -23,22 +23,22 @@
                     <button type="submit" class="text-white absolute end-2.5 bottom-2.5 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">Search</button>
                 </div>
                 <div class="basis-1/6 px-1">
-                    <button type="submit" name="order_by_country" value="ASC" class="w-full text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 flex flex-row justify-center items-center"><span>Countries</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mt-1">
+                    <button id="order-by-stars"
+                            type="submit"
+                            name="order_by_stars"
+                            value="<?=$orderBy['stars']?>"
+                            class="w-full text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 flex flex-row justify-center items-center"><span>Stars</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mt-1 <?=($orderBy['stars'] == "DESC" ? 'rotate-180' : '')?>">
                             <path fill-rule="evenodd" d="M14.77 4.21a.75.75 0 01.02 1.06l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 011.08-1.04L10 8.168l3.71-3.938a.75.75 0 011.06-.02zm0 6a.75.75 0 01.02 1.06l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 111.08-1.04L10 14.168l3.71-3.938a.75.75 0 011.06-.02z" clip-rule="evenodd" />
                         </svg>
                     </button>
                 </div>
                 <div class="basis-1/6 px-1">
-                    <button type="submit" name="order_by_city" value="ASC" class="w-full text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 flex flex-row justify-center items-center"><span>Cities</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mt-1">
-                            <path fill-rule="evenodd" d="M14.77 4.21a.75.75 0 01.02 1.06l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 011.08-1.04L10 8.168l3.71-3.938a.75.75 0 011.06-.02zm0 6a.75.75 0 01.02 1.06l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 111.08-1.04L10 14.168l3.71-3.938a.75.75 0 011.06-.02z" clip-rule="evenodd" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="basis-1/6 px-1">
-                    <button type="submit" name="order_by_price" value="ASC" class="w-full text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 flex flex-row justify-center items-center"><span>Price</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mt-1">
+                    <button name="order_by_price"
+                            type="submit"
+                            value="<?=$orderBy['price']?>"
+                            class="w-full text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800 flex flex-row justify-center items-center"><span>Price</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mt-1 <?=($orderBy['price'] == "DESC" ? 'rotate-180' : '')?>">
                             <path fill-rule="evenodd" d="M14.77 4.21a.75.75 0 01.02 1.06l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 011.08-1.04L10 8.168l3.71-3.938a.75.75 0 011.06-.02zm0 6a.75.75 0 01.02 1.06l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 111.08-1.04L10 14.168l3.71-3.938a.75.75 0 011.06-.02z" clip-rule="evenodd" />
                         </svg>
                     </button>
