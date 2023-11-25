@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "50a695ba94d8cb26dd94218b668c0d3a",
+    "content-hash": "7d275a0b91fe99b4d02e6e3b46433f83",
     "packages": [
         {
             "name": "codeigniter4/framework",
@@ -250,97 +250,6 @@
                 }
             ],
             "time": "2023-10-10T08:35:13+00:00"
-        },
-        {
-            "name": "mihatori/codeignitervite",
-            "version": "v1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/firtadokei/codeigniter-vitejs.git",
-                "reference": "221343365925867a70028a63431d9276d04ee3df"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/firtadokei/codeigniter-vitejs/zipball/221343365925867a70028a63431d9276d04ee3df",
-                "reference": "221343365925867a70028a63431d9276d04ee3df",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.4 || ^8.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Mihatori\\CodeigniterVite\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mihatori Kei",
-                    "email": "mihatorikei@gmail.com",
-                    "homepage": "https://github.com/firtadokei/"
-                }
-            ],
-            "description": "Integrate viteJs in codeiginter4 framework",
-            "homepage": "https://github.com/firtadokei/codeigniter-vitejs",
-            "keywords": [
-                "codeigniter",
-                "codeigniter spa",
-                "codeigniter-reactJs",
-                "codeigniter-svelteJs",
-                "codeigniter-viteJs",
-                "codeigniter-vueJs",
-                "codeigniter4"
-            ],
-            "support": {
-                "issues": "https://github.com/firtadokei/codeigniter-vitejs/issues",
-                "source": "https://github.com/firtadokei/codeigniter-vitejs/tree/v1.1.1"
-            },
-            "time": "2022-11-18T03:05:23+00:00"
-        },
-        {
-            "name": "monster010/codeigniter-vite-plugin",
-            "version": "v0.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/monster010/codeigniter-vite-plugin.git",
-                "reference": "808212fc7b28ee0aac041c43797d7b877761fd68"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/monster010/codeigniter-vite-plugin/zipball/808212fc7b28ee0aac041c43797d7b877761fd68",
-                "reference": "808212fc7b28ee0aac041c43797d7b877761fd68",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "monster010\\CodeIgniterVite\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "monster010",
-                    "email": "git@monster010.de"
-                }
-            ],
-            "description": "CodeIgniter Plugin for Vite (CodeIgniter Side)",
-            "support": {
-                "issues": "https://github.com/monster010/codeigniter-vite-plugin/issues",
-                "source": "https://github.com/monster010/codeigniter-vite-plugin/tree/v0.0.5"
-            },
-            "time": "2023-10-02T16:33:28+00:00"
         },
         {
             "name": "psr/log",

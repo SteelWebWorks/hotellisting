@@ -6,7 +6,7 @@
     <meta name="description" content="One small application to show hotels' offers">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <?=vite_tags(['resources/css/app.css', 'resources/js/app.js'])?>
+    <script src="<?=base_url('js/app.js')?>"></script>
 </head>
 <body class="bg-slate-900">
     <div class="max-w-6xl mx-auto my-2 py-2">

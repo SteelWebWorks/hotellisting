@@ -1,4 +1,2 @@
-/**
- * Placeholder File
- */
+import './../css/app.css'
 import 'lazysizes';

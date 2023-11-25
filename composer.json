@@ -12,9 +12,7 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "codeigniter4/framework": "^4.0",
-        "daycry/cronjob": "^2.2",
-        "mihatori/codeignitervite": "^1.1",
-        "monster010/codeigniter-vite-plugin": "^0.0.5"
+        "daycry/cronjob": "^2.2"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9",
